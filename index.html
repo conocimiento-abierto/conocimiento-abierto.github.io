@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decálogo del Conocimiento Abierto</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        
+        .content-wrapper {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e0e6ed;
+        }
+        
+        h1 {
+            margin-top: 0;
+            color: #0056b3;
+            font-size: 2.2rem;
+        }
+        
+        .lang-selector {
+            text-align: right;
+            margin-bottom: 1.5rem;
+        }
+        
+        .lang-btn {
+            padding: 8px 15px;
+            margin-left: 8px;
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .lang-btn:hover {
+            background-color: #d1d9e0;
+        }
+        
+        .lang-btn.active {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        
+        ol {
+            padding-left: 1.8rem;
+            list-style-type: none;
+            counter-reset: item;
+        }
+        
+        li {
+            margin-bottom: 1.5rem;
+            counter-increment: item;
+            position: relative;
+            padding-left: 35px;
+        }
+
+        li::before {
+            content: counter(item);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            line-height: 25px;
+        }
+        
+        strong {
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e0e6ed;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            .content-wrapper {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .content-wrapper {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .lang-btn {
+                padding: 6px 10px;
+                font-size: 0.9rem;
+            }
+            li {
+                padding-left: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-selector">
+            <button id="btnES" class="lang-btn active">ES</button>
+            <button id="btnCA" class="lang-btn">CA</button>
+            <button id="btnGL" class="lang-btn">GL</button>
+            <button id="btnEU" class="lang-btn">EU</button>
+            <button id="btnEN" class="lang-btn">EN</button>
+        </div>
+        
+        <div class="content-wrapper">
+            <header>
+                <h1 id="title-es">Decálogo del conocimiento abierto</h1>
+                <h1 id="title-ca" class="hidden">Decàleg del coneixement obert</h1>
+                <h1 id="title-gl" class="hidden">Decálogo do coñecemento aberto</h1>
+                <h1 id="title-eu" class="hidden">Ezagutza irekiaren dekalogoa</h1>
+                <h1 id="title-en" class="hidden">Decalogue of open knowledge</h1>
+            </header>
+            
+            <div id="content-es">
+                <ol>
+                    <li><strong>Acceso universal</strong>: Todo el mundo debe tener acceso a la información y al conocimiento. El conocimiento abierto debe ser accesible para todos, sin importar su origen socioeconómico, geográfico, de género o capacidad física. Esto incluye utilizar formatos estándar y abiertos que garanticen la interoperabilidad entre diferentes plataformas, dispositivos y sistemas operativos.</li>
+                    <li><strong>Participación activa</strong>: Los usuarios de recursos de conocimiento abierto no solo deben ser consumidores, sino también productores de información. Esto implica fomentar la creación, adaptación y mejora de estos recursos por parte de los usuarios.</li>
+                    <li><strong>Diversidad y contextualización</strong>: Los recursos de conocimiento abierto deben ser relevantes y aplicables a diferentes contextos y culturas. La educación debe adaptarse a las necesidades locales y reflejar la diversidad del mundo en el que vivimos.</li>
+                    <li><strong>Colaboración y comunidad</strong>: La generación de conocimiento abierto es un esfuerzo colectivo. Deben fomentarse las colaboraciones y el intercambio de ideas y recursos a través de comunidades de aprendizaje.</li>
+                    <li><strong>Sostenibilidad</strong>: Los recursos y las plataformas de conocimiento abierto deben ser sostenibles en el largo plazo. Esto incluye la creación de modelos de financiación efectivos y el mantenimiento de la infraestructura técnica.</li>
+                    <li><strong>Innovación</strong>: El conocimiento abierto permite la experimentación y la innovación en educación. Debemos abrazar y fomentar nuevas formas de enseñanza y aprendizaje que aprovechen esta flexibilidad.</li>
+                    <li><strong>Calidad y rigor</strong>: Se debe garantizar la calidad del conocimiento abierto a través de la revisión por pares y otros mecanismos de control de calidad. La comunidad educativa debe participar en estos procesos de validación.</li>
+                    <li><strong>Educación y habilidades</strong>: Los usuarios deben ser educados en el uso de recursos de conocimiento abierto. Esto incluye el fomento de habilidades digitales, la comprensión de licencias y derechos, y la instrucción en la creación y adaptación de recursos.</li>
+                    <li><strong>Licencias abiertas</strong>: Los recursos de conocimiento abierto deben ser compartidos bajo licencias que permitan su libre uso, adaptación y distribución, como las licencias Creative Commons.</li>
+                    <li><strong>Respeto a los derechos de autor</strong>: Aunque el conocimiento abierto busca la máxima libertad de uso, adaptación y distribución, también debe respetar los derechos de autor. Las contribuciones de cada autor deben ser debidamente reconocidas y citadas.</li>
+                </ol>
+                <footer>
+                    <p>(ɔ) Este documento tuvo su origen en <a href="https://t.me/ChatGPTedu" target="_blank">https://t.me/ChatGPTedu</a></p>
+                </footer>
+            </div>
+            
+            <div id="content-ca" class="hidden">
+                <ol>
+                    <li><strong>Accés universal</strong>: Tothom ha de tenir accés a la informació i al coneixement. El coneixement obert ha de ser accessible per a tothom, sense importar el seu origen socioeconòmic, geogràfic, de gènere o capacitat física. Això inclou utilitzar formats estàndard i oberts que garanteixin la interoperabilitat entre diferents plataformes, dispositius i sistemes operatius.</li>
+                    <li><strong>Participació activa</strong>: Els usuaris de recursos de coneixement obert no només han de ser consumidors, sinó també productors d'informació. Això implica fomentar la creació, adaptació i millora d'aquests recursos per part dels usuaris.</li>
+                    <li><strong>Diversitat i contextualització</strong>: Els recursos de coneixement obert han de ser rellevants i aplicables a diferents contextos i cultures. L'educació s'ha d'adaptar a les necessitats locals i reflectir la diversitat del món en què vivim.</li>
+                    <li><strong>Col·laboració i comunitat</strong>: La generació de coneixement obert és un esforç col·lectiu. S'han de fomentar les col·laboracions i l'intercanvi d'idees i recursos a través de comunitats d'aprenentatge.</li>
+                    <li><strong>Sostenibilitat</strong>: Els recursos i les plataformes de coneixement obert han de ser sostenibles a llarg termini. Això inclou la creació de models de finançament efectius i el manteniment de la infraestructura tècnica.</li>
+                    <li><strong>Innovació</strong>: El coneixement obert permet l'experimentació i la innovació en educació. Hem d'abraçar i fomentar noves formes d'ensenyament i aprenentatge que aprofitin aquesta flexibilitat.</li>
+                    <li><strong>Qualitat i rigor</strong>: S'ha de garantir la qualitat del coneixement obert a través de la revisió per parells i altres mecanismes de control de qualitat. La comunitat educativa ha de participar en aquests processos de validació.</li>
+                    <li><strong>Educació i habilitats</strong>: Els usuaris han de ser educats en l'ús de recursos de coneixement obert. Això inclou el foment d'habilitats digitals, la comprensió de llicències i drets, i la instrucció en la creació i adaptació de recursos.</li>
+                    <li><strong>Llicències obertes</strong>: Els recursos de coneixement obert han de ser compartits sota llicències que permetin el seu lliure ús, adaptació i distribució, com les llicències Creative Commons.</li>
+                    <li><strong>Respecte als drets d'autor</strong>: Tot i que el coneixement obert busca la màxima llibertat d'ús, adaptació i distribució, també ha de respectar els drets d'autor. Les contribucions de cada autor han de ser degudament reconegudes i citades.</li>
+                </ol>
+                 <footer>
+                    <p>(ɔ) Aquest document va tenir el seu origen a <a href="https://t.me/ChatGPTedu" target="_blank">https://t.me/ChatGPTedu</a></p>
+                </footer>
+            </div>
+
+            <div id="content-gl" class="hidden">
+                <ol>
+                    <li><strong>Acceso universal</strong>: Todo o mundo debe ter acceso á información e ao coñecemento. O coñecemento aberto debe ser accesible para todos, sen importar a súa orixe socioeconómica, xeográfica, de xénero ou capacidade física. Isto inclúe utilizar formatos estándar e abertos que garantan a interoperabilidade entre diferentes plataformas, dispositivos e sistemas operativos.</li>
+                    <li><strong>Participación activa</strong>: Os usuarios de recursos de coñecemento aberto non só deben ser consumidores, senón tamén produtores de información. Isto implica fomentar a creación, adaptación e mellora destes recursos por parte dos usuarios.</li>
+                    <li><strong>Diversidade e contextualización</strong>: Os recursos de coñecemento aberto deben ser relevantes e aplicables a diferentes contextos e culturas. A educación debe adaptarse ás necesidades locais e reflectir a diversidade do mundo no que vivimos.</li>
+                    <li><strong>Colaboración e comunidade</strong>: A xeración de coñecemento aberto é un esforzo colectivo. Débense fomentar as colaboracións e o intercambio de ideas e recursos a través de comunidades de aprendizaxe.</li>
+                    <li><strong>Sostibilidade</strong>: Os recursos e as plataformas de coñecemento aberto deben ser sostibles a longo prazo. Isto inclúe a creación de modelos de financiamento efectivos e o mantemento da infraestrutura técnica.</li>
+                    <li><strong>Innovación</strong>: O coñecemento aberto permite a experimentación e a innovación en educación. Debemos abrazar e fomentar novas formas de ensino e aprendizaxe que aproveiten esta flexibilidade.</li>
+                    <li><strong>Calidade e rigor</strong>: Débese garantir a calidade do coñecemento aberto a través da revisión por pares e outros mecanismos de control de calidade. A comunidade educativa debe participar nestes procesos de validación.</li>
+                    <li><strong>Educación e habilidades</strong>: Os usuarios deben ser educados no uso de recursos de coñecemento aberto. Isto inclúe o fomento de habilidades dixitais, a comprensión de licenzas e dereitos, e a instrución na creación e adaptación de recursos.</li>
+                    <li><strong>Licenzas abertas</strong>: Os recursos de coñecemento aberto deben ser compartidos baixo licenzas que permitan o seu libre uso, adaptación e distribución, como as licenzas Creative Commons.</li>
+                    <li><strong>Respecto aos dereitos de autor</strong>: Aínda que o coñecemento aberto busca a máxima liberdade de uso, adaptación e distribución, tamén debe respectar os dereitos de autor. As contribucións de cada autor deben ser debidamente recoñecidas e citadas.</li>
+                </ol>
+                <footer>
+                    <p>(ɔ) Este documento tivo a súa orixe en <a href="https://t.me/ChatGPTedu" target="_blank">https://t.me/ChatGPTedu</a></p>
+                </footer>
+            </div>
+
+            <div id="content-eu" class="hidden">
+                <ol>
+                    <li><strong>Sarbide unibertsala</strong>: Mundu guztiak informazioa eta ezagutza eskuratzeko aukera izan behar du. Ezagutza irekia guztiontzat eskuragarri egon behar da, jatorri sozioekonomikoa, geografikoa, generoa edo gaitasun fisikoa edozein izanda ere. Horrek formatu estandar eta irekiak erabiltzea barne hartzen du, plataforma, gailu eta sistema eragile desberdinen arteko elkarreragingarritasuna bermatzeko.</li>
+                    <li><strong>Parte-hartze aktiboa</strong>: Ezagutza irekiko baliabideen erabiltzaileek kontsumitzaile izateaz gain, informazio-ekoizle ere izan behar dute. Horrek esan nahi du erabiltzaileek baliabide horiek sortzea, egokitzea eta hobetzea sustatu behar dela.</li>
+                    <li><strong>Aniztasuna eta testuingurua</strong>: Ezagutza irekiko baliabideek garrantzitsuak eta aplikagarriak izan behar dute testuinguru eta kultura desberdinetan. Hezkuntzak tokiko beharretara egokitu behar du eta bizi garen munduaren aniztasuna islatu.</li>
+                    <li><strong>Lankidetza eta komunitatea</strong>: Ezagutza irekiaren sorrera ahalegin kolektiboa da. Lankidetzak eta ideien eta baliabideen trukea sustatu behar dira ikaskuntza-komunitateen bidez.</li>
+                    <li><strong>Jasangarritasuna</strong>: Ezagutza irekiko baliabideek eta plataformek jasangarriak izan behar dute epe luzera. Horrek finantzaketa-eredu eraginkorrak sortzea eta azpiegitura teknikoa mantentzea barne hartzen du.</li>
+                    <li><strong>Berrikuntza</strong>: Ezagutza irekiak hezkuntzan esperimentazioa eta berrikuntza ahalbidetzen ditu. Malgutasun hori aprobetxatzen duten irakasteko eta ikasteko modu berriak bereganatu eta sustatu behar ditugu.</li>
+                    <li><strong>Kalitatea eta zorroztasuna</strong>: Ezagutza irekiaren kalitatea bermatu behar da parekoen berrikuspenaren eta kalitate-kontroleko beste mekanismo batzuen bidez. Hezkuntza-komunitateak baliozkotze-prozesu horietan parte hartu behar du.</li>
+                    <li><strong>Hezkuntza eta trebetasunak</strong>: Erabiltzaileak ezagutza irekiko baliabideen erabileran hezi behar dira. Horrek trebetasun digitalak sustatzea, lizentziak eta eskubideak ulertzea, eta baliabideak sortzen eta egokitzen irakastea barne hartzen du.</li>
+                    <li><strong>Lizentzia irekiak</strong>: Ezagutza irekiko baliabideak erabilera, egokitzapen eta banaketa librea ahalbidetzen duten lizentzien pean partekatu behar dira, hala nola Creative Commons lizentziak.</li>
+                    <li><strong>Egile-eskubideekiko errespetua</strong>: Ezagutza irekiak erabilera, egokitzapen eta banaketa askatasun handiena bilatzen badu ere, egile-eskubideak ere errespetatu behar ditu. Egile bakoitzaren ekarpenak behar bezala aitortu eta aipatu behar dira.</li>
+                </ol>
+                <footer>
+                    <p>(ɔ) Dokumentu hau <a href="https://t.me/ChatGPTedu" target="_blank">https://t.me/ChatGPTedu</a> helbidean sortu zen</p>
+                </footer>
+            </div>
+            
+            <div id="content-en" class="hidden">
+                <ol>
+                    <li><strong>Universal access</strong>: Everyone should have access to information and knowledge. Open knowledge must be accessible to all, regardless of socioeconomic background, geography, gender, or physical ability. This includes using standard and open formats that ensure interoperability between different platforms, devices, and operating systems.</li>
+                    <li><strong>Active participation</strong>: Users of open knowledge resources should not only be consumers but also producers of information. This involves encouraging the creation, adaptation, and improvement of these resources by users.</li>
+                    <li><strong>Diversity and contextualization</strong>: Open knowledge resources must be relevant and applicable to different contexts and cultures. Education should adapt to local needs and reflect the diversity of the world we live in.</li>
+                    <li><strong>Collaboration and community</strong>: The generation of open knowledge is a collective effort. Collaborations and the exchange of ideas and resources through learning communities should be encouraged.</li>
+                    <li><strong>Sustainability</strong>: Open knowledge resources and platforms must be sustainable in the long term. This includes creating effective funding models and maintaining technical infrastructure.</li>
+                    <li><strong>Innovation</strong>: Open knowledge allows for experimentation and innovation in education. We must embrace and foster new forms of teaching and learning that leverage this flexibility.</li>
+                    <li><strong>Quality and rigor</strong>: The quality of open knowledge must be guaranteed through peer review and other quality control mechanisms. The educational community should participate in these validation processes.</li>
+                    <li><strong>Education and skills</strong>: Users must be educated in the use of open knowledge resources. This includes promoting digital skills, understanding licenses and rights, and instruction in the creation and adaptation of resources.</li>
+                    <li><strong>Open licenses</strong>: Open knowledge resources must be shared under licenses that allow for their free use, adaptation, and distribution, such as Creative Commons licenses.</li>
+                    <li><strong>Respect for copyright</strong>: Although open knowledge seeks maximum freedom of use, adaptation, and distribution, it must also respect copyright. The contributions of each author must be properly acknowledged and cited.</li>
+                </ol>
+                <footer>
+                    <p>(ɔ) This document originated from <a href="https://t.me/ChatGPTedu" target="_blank">https://t.me/ChatGPTedu</a></p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elementos DOM
+            const langButtons = {
+                es: document.getElementById('btnES'),
+                ca: document.getElementById('btnCA'),
+                gl: document.getElementById('btnGL'),
+                eu: document.getElementById('btnEU'),
+                en: document.getElementById('btnEN')
+            };
+            
+            const titles = {
+                es: document.getElementById('title-es'),
+                ca: document.getElementById('title-ca'),
+                gl: document.getElementById('title-gl'),
+                eu: document.getElementById('title-eu'),
+                en: document.getElementById('title-en')
+            };
+
+            const contents = {
+                es: document.getElementById('content-es'),
+                ca: document.getElementById('content-ca'),
+                gl: document.getElementById('content-gl'),
+                eu: document.getElementById('content-eu'),
+                en: document.getElementById('content-en')
+            };
+            
+            // Función para cambiar el idioma
+            function setLanguage(lang) {
+                // Ocultar todos los contenidos y títulos
+                Object.values(titles).forEach(el => el.classList.add('hidden'));
+                Object.values(contents).forEach(el => el.classList.add('hidden'));
+                
+                // Quitar clase active de todos los botones
+                Object.values(langButtons).forEach(btn => btn.classList.remove('active'));
+                
+                // Mostrar el contenido del idioma seleccionado
+                if (titles[lang] && contents[lang] && langButtons[lang]) {
+                    titles[lang].classList.remove('hidden');
+                    contents[lang].classList.remove('hidden');
+                    langButtons[lang].classList.add('active');
+                    document.documentElement.lang = lang;
+                } else {
+                    // Fallback a español si el idioma no existe
+                    titles.es.classList.remove('hidden');
+                    contents.es.classList.remove('hidden');
+                    langButtons.es.classList.add('active');
+                    document.documentElement.lang = 'es';
+                }
+                
+                // Guardar preferencia en localStorage
+                try {
+                    localStorage.setItem('preferredLanguage', lang);
+                } catch (e) {
+                    console.warn("No se pudo guardar la preferencia de idioma en localStorage.");
+                }
+            }
+            
+            // Event Listeners para los botones
+            for (const [lang, btn] of Object.entries(langButtons)) {
+                btn.addEventListener('click', () => setLanguage(lang));
+            }
+            
+            // Detección de idioma al cargar la página
+            function initializeLanguage() {
+                let preferredLang = 'es'; // Default language
+                try {
+                     preferredLang = localStorage.getItem('preferredLanguage');
+                } catch (e) {
+                    console.warn("No se pudo acceder a localStorage.");
+                }
+                
+                if (preferredLang && langButtons[preferredLang]) {
+                    setLanguage(preferredLang);
+                    return;
+                }
+                
+                const browserLang = (navigator.language || navigator.userLanguage).slice(0, 2);
+                
+                if (langButtons[browserLang]) {
+                    setLanguage(browserLang);
+                } else {
+                    setLanguage('es');
+                }
+            }
+            
+            initializeLanguage();
+        });
+    </script>
+</body>
+</html>
