@@ -30,22 +30,22 @@
         
         header {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: center;
             align-items: center;
-            text-align: center;
             margin-bottom: 2.5rem;
             padding-bottom: 1.5rem;
             border-bottom: 2px solid #e0e6ed;
         }
 
         .header-logo {
-            max-width: 150px;
+            max-width: 100px; /* Reducido para un mejor balance */
             height: auto;
-            margin-bottom: 1rem;
+            margin-right: 1.5rem;
         }
         
         h1 {
-            margin-top: 0;
+            margin: 0;
             color: #0056b3;
             font-size: 2.2rem;
         }
@@ -135,6 +135,17 @@
             }
         }
         
+        @media (max-width: 576px) {
+             header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header-logo {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+
         @media (max-width: 480px) {
             .content-wrapper {
                 padding: 15px;
@@ -164,7 +175,7 @@
         
         <div class="content-wrapper">
             <header>
-                <img src="abierto_reducido.png" alt="Logo de Conocimiento Abierto" class="header-logo">
+                <img src="https://conocimiento-abierto.github.io/abierto_reducido.png" alt="Logo de Conocimiento Abierto" class="header-logo">
                 <h1 id="title-es">Decálogo del conocimiento abierto</h1>
                 <h1 id="title-ca" class="hidden">Decàleg del coneixement obert</h1>
                 <h1 id="title-gl" class="hidden">Decálogo do coñecemento aberto</h1>
