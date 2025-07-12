@@ -29,10 +29,19 @@
         }
         
         header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
             margin-bottom: 2.5rem;
             padding-bottom: 1.5rem;
             border-bottom: 2px solid #e0e6ed;
+        }
+
+        .header-logo {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 1rem;
         }
         
         h1 {
@@ -155,6 +164,7 @@
         
         <div class="content-wrapper">
             <header>
+                <img src="abierto_reducido.png" alt="Logo de Conocimiento Abierto" class="header-logo">
                 <h1 id="title-es">Decálogo del conocimiento abierto</h1>
                 <h1 id="title-ca" class="hidden">Decàleg del coneixement obert</h1>
                 <h1 id="title-gl" class="hidden">Decálogo do coñecemento aberto</h1>
@@ -183,7 +193,7 @@
             <div id="content-ca" class="hidden">
                 <ol>
                     <li><strong>Accés universal</strong>: Tothom ha de tenir accés a la informació i al coneixement. El coneixement obert ha de ser accessible per a tothom, sense importar el seu origen socioeconòmic, geogràfic, de gènere o capacitat física. Això inclou utilitzar formats estàndard i oberts que garanteixin la interoperabilitat entre diferents plataformes, dispositius i sistemes operatius.</li>
-                    <li><strong>Participació activa</strong>: Els usuaris de recursos de coneixement obert no només han de ser consumidors, sinó també productors d'informació. Això implica fomentar la creació, adaptació i millora d'aquests recursos per part dels usuaris.</li>
+                    <li><strong>Participació activa</strong>: Els usuaris de recursos de coneixement obert no només han de ser consumidors, sinó també productors d'informació. Això implica fomentar la creació, adaptació i millora d'aquests recursos per parte dels usuaris.</li>
                     <li><strong>Diversitat i contextualització</strong>: Els recursos de coneixement obert han de ser rellevants i aplicables a diferents contextos i cultures. L'educació s'ha d'adaptar a les necessitats locals i reflectir la diversitat del món en què vivim.</li>
                     <li><strong>Col·laboració i comunitat</strong>: La generació de coneixement obert és un esforç col·lectiu. S'han de fomentar les col·laboracions i l'intercanvi d'idees i recursos a través de comunitats d'aprenentatge.</li>
                     <li><strong>Sostenibilitat</strong>: Els recursos i les plataformes de coneixement obert han de ser sostenibles a llarg termini. Això inclou la creació de models de finançament efectius i el manteniment de la infraestructura tècnica.</li>
