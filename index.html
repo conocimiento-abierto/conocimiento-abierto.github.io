@@ -51,8 +51,25 @@
         }
         
         .lang-selector {
-            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
             margin-bottom: 1.5rem;
+        }
+
+        .print-btn {
+            margin-right: auto; /* Pushes this button to the far left */
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .print-btn:hover {
+            background-color: #0056b3;
         }
         
         .lang-btn {
@@ -144,6 +161,19 @@
                 margin-right: 0;
                 margin-bottom: 1rem;
             }
+            .lang-selector {
+                flex-direction: column;
+            }
+            .print-btn {
+                margin-right: 0;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+            .lang-btn {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 5px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -153,12 +183,43 @@
             h1 {
                 font-size: 1.5rem;
             }
-            .lang-btn {
-                padding: 6px 10px;
-                font-size: 0.9rem;
-            }
             li {
                 padding-left: 30px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background-color: #fff;
+                color: #000;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .lang-selector, footer {
+                display: none;
+            }
+            .container {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .content-wrapper {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+            }
+            header {
+                border-bottom: 2px solid #000;
+            }
+            li {
+                page-break-inside: avoid;
+            }
+            h1 {
+                font-size: 18pt;
+            }
+            a {
+                text-decoration: none;
+                color: #000;
             }
         }
     </style>
@@ -166,6 +227,7 @@
 <body>
     <div class="container">
         <div class="lang-selector">
+            <button id="btnPrint" class="print-btn">🖨️ Imprimir</button>
             <button id="btnES" class="lang-btn active">ES</button>
             <button id="btnCA" class="lang-btn">CA</button>
             <button id="btnGL" class="lang-btn">GL</button>
@@ -175,7 +237,7 @@
         
         <div class="content-wrapper">
             <header>
-                <img src="https://conocimiento-abierto.github.io/abierto_reducido.png" alt="Logo de Conocimiento Abierto" class="header-logo">
+                <img src="https://conocimiento-abierto.github.io/abierto_reducido.png" alt="Logo de Conocimiento Abierto" class="header-logo" title="Facta, non verba">
                 <h1 id="title-es">Decálogo del conocimiento abierto</h1>
                 <h1 id="title-ca" class="hidden">Decàleg del coneixement obert</h1>
                 <h1 id="title-gl" class="hidden">Decálogo do coñecemento aberto</h1>
@@ -205,7 +267,7 @@
                 <ol>
                     <li><strong>Accés universal</strong>: Tothom ha de tenir accés a la informació i al coneixement. El coneixement obert ha de ser accessible per a tothom, sense importar el seu origen socioeconòmic, geogràfic, de gènere o capacitat física. Això inclou utilitzar formats estàndard i oberts que garanteixin la interoperabilitat entre diferents plataformes, dispositius i sistemes operatius.</li>
                     <li><strong>Participació activa</strong>: Els usuaris de recursos de coneixement obert no només han de ser consumidors, sinó també productors d'informació. Això implica fomentar la creació, adaptació i millora d'aquests recursos per parte dels usuaris.</li>
-                    <li><strong>Diversitat i contextualització</strong>: Els recursos de coneixement obert han de ser rellevants i aplicables a diferents contextos i cultures. L'educació s'ha d'adaptar a les necessitats locals i reflectir la diversitat del món en què vivim.</li>
+                    <li><strong>Diversitat y contextualització</strong>: Els recursos de coneixement obert han de ser rellevants i aplicables a diferents contextos i cultures. L'educació s'ha d'adaptar a les necessitats locals i reflectir la diversitat del món en què vivim.</li>
                     <li><strong>Col·laboració i comunitat</strong>: La generació de coneixement obert és un esforç col·lectiu. S'han de fomentar les col·laboracions i l'intercanvi d'idees i recursos a través de comunitats d'aprenentatge.</li>
                     <li><strong>Sostenibilitat</strong>: Els recursos i les plataformes de coneixement obert han de ser sostenibles a llarg termini. Això inclou la creació de models de finançament efectius i el manteniment de la infraestructura tècnica.</li>
                     <li><strong>Innovació</strong>: El coneixement obert permet l'experimentació i la innovació en educació. Hem d'abraçar i fomentar noves formes d'ensenyament i aprenentatge que aprofitin aquesta flexibilitat.</li>
@@ -278,6 +340,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Elementos DOM
+            const btnPrint = document.getElementById('btnPrint');
             const langButtons = {
                 es: document.getElementById('btnES'),
                 ca: document.getElementById('btnCA'),
@@ -302,6 +365,11 @@
                 en: document.getElementById('content-en')
             };
             
+            // Función para imprimir
+            btnPrint.addEventListener('click', function() {
+                window.print();
+            });
+
             // Función para cambiar el idioma
             function setLanguage(lang) {
                 // Ocultar todos los contenidos y títulos
@@ -333,7 +401,7 @@
                 }
             }
             
-            // Event Listeners para los botones
+            // Event Listeners para los botones de idioma
             for (const [lang, btn] of Object.entries(langButtons)) {
                 btn.addEventListener('click', () => setLanguage(lang));
             }
