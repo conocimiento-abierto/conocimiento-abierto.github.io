@@ -104,12 +104,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function getLanguageFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const rawLang = params.get('lang') || params.get('idioma');
+        if (!rawLang) return null;
+        const normalized = rawLang.trim().toLowerCase();
+        return translations[normalized] ? normalized : null;
+    }
+
     // Inicializar el idioma al cargar la página
     function initializeLanguage() {
         // Buscar idioma por defecto en la configuración
         const defaultLang = languageConfig.languages.find(lang => lang.default);
         let preferredLang = defaultLang ? defaultLang.code : languageConfig.languages[0].code;
         
+        const urlLang = getLanguageFromUrl();
+        if (urlLang) {
+            setLanguage(urlLang);
+            return;
+        }
+
         try {
             const storedLang = localStorage.getItem('preferredLanguage');
             if (storedLang && translations[storedLang]) {

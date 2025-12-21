@@ -9,6 +9,7 @@ A static, multilingual website displaying the ten principles of open knowledge w
 - **Responsive Design**: Mobile-first design that works across all devices
 - **Browser Language Detection**: Automatically detects and sets user's preferred language
 - **Local Storage**: Remembers language preference across sessions
+- **URL Language Parameter**: Force a language with `?lang=xx` (also accepts `?idioma=xx`)
 
 ## Languages
 
@@ -42,6 +43,18 @@ npx serve .
 │   └── *.json          # Translation files
 ├── abierto.png         # Logo image
 └── abierto_reducido.png # Reduced logo for mobile
+```
+
+## URL Language Parameter
+
+You can force the language from the URL using a query parameter. This takes priority over localStorage and browser detection.
+
+Examples:
+
+```
+index.html?lang=es
+index.html?lang=en
+index.html?idioma=fr
 ```
 
 ## Adding New Languages
