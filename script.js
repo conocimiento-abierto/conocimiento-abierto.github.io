@@ -2,9 +2,111 @@ document.addEventListener('DOMContentLoaded', function() {
     const btnPrint = document.getElementById('btnPrint');
     const langSelector = document.getElementById('lang-selector');
     const decalogueList = document.getElementById('decalogue-list');
+    const ANALYTICS_FALLBACK_ENDPOINT = 'https://bilateria.org/app/estadistica/conocimiento-abierto/track.php';
+    const ANALYTICS_COOLDOWN_MS = 30 * 60 * 1000;
+    const ANALYTICS_TIMEOUT_MS = 4000;
 
     let translations = {};
     let languageConfig = {};
+
+    function getMetaContent(name) {
+        const node = document.querySelector(`meta[name="${name}"]`);
+        return node ? node.getAttribute('content') : '';
+    }
+
+    function getAnalyticsConfig() {
+        return {
+            endpoint: getMetaContent('analytics-endpoint') || ANALYTICS_FALLBACK_ENDPOINT,
+            siteId: getMetaContent('analytics-site-id') || 'conocimiento-abierto'
+        };
+    }
+
+    function getAnalyticsStorageKey(siteId) {
+        return `analytics:last-visit:${siteId}`;
+    }
+
+    function shouldCountVisit(siteId) {
+        try {
+            const rawValue = window.localStorage.getItem(getAnalyticsStorageKey(siteId));
+            if (!rawValue) {
+                return true;
+            }
+
+            const lastVisit = parseInt(rawValue, 10);
+            if (!Number.isFinite(lastVisit)) {
+                return true;
+            }
+
+            return (Date.now() - lastVisit) > ANALYTICS_COOLDOWN_MS;
+        } catch (error) {
+            return true;
+        }
+    }
+
+    function rememberVisit(siteId) {
+        try {
+            window.localStorage.setItem(getAnalyticsStorageKey(siteId), String(Date.now()));
+        } catch (error) {
+            // La analitica es opcional y no debe afectar al funcionamiento de la app.
+        }
+    }
+
+    function requestAnalytics(config) {
+        const countVisit = shouldCountVisit(config.siteId);
+        const callbackName = `conocimientoAbiertoAnalytics_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+        const query = new URLSearchParams();
+        const script = document.createElement('script');
+        let timeoutId = 0;
+        let finished = false;
+
+        query.set('callback', callbackName);
+        query.set('referrer', document.referrer || '');
+        if (!countVisit) {
+            query.set('summary_only', '1');
+        }
+
+        function cleanup() {
+            if (finished) {
+                return;
+            }
+            finished = true;
+            window.clearTimeout(timeoutId);
+            if (script.parentNode) {
+                script.parentNode.removeChild(script);
+            }
+            try {
+                delete window[callbackName];
+            } catch (error) {
+                window[callbackName] = undefined;
+            }
+        }
+
+        window[callbackName] = function () {
+            if (countVisit) {
+                rememberVisit(config.siteId);
+            }
+            cleanup();
+        };
+
+        timeoutId = window.setTimeout(cleanup, ANALYTICS_TIMEOUT_MS);
+        script.async = true;
+        script.src = `${config.endpoint}?${query.toString()}`;
+        script.onerror = cleanup;
+        document.head.appendChild(script);
+    }
+
+    function initAnalytics() {
+        const config = getAnalyticsConfig();
+        const run = function () {
+            requestAnalytics(config);
+        };
+
+        if (typeof window.requestIdleCallback === 'function') {
+            window.requestIdleCallback(run, { timeout: 2500 });
+        } else {
+            window.setTimeout(run, 1200);
+        }
+    }
 
     // Cargar traducciones y configurar la página
     async function loadTranslations() {
@@ -146,4 +248,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Iniciar la aplicación
     loadTranslations();
+    initAnalytics();
 });
