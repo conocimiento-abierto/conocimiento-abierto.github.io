@@ -1,12 +1,12 @@
 // Textos del decálogo en 简体中文. SPDX-License-Identifier: CC-BY-SA-4.0
 window.DECALOGO_TEXTOS = window.DECALOGO_TEXTOS || {};
 window.DECALOGO_TEXTOS["zh-cn"] = {
-  "pageTitle": "开放知识十诫",
+  "pageTitle": "开放知识十项原则",
   "printButton": "打印",
   "language": "语言",
   "theme": "浅色或深色模式",
   "logoAlt": "开放知识标志",
-  "mainTitle": "开放知识十诫",
+  "mainTitle": "开放知识十项原则",
   "items": [
     "<strong>普遍获取</strong>：人人都应当能够获取信息、知识以及教育软件。开放知识应当对所有人可及，不因社会经济背景、地理位置、性别或身体能力而有差别。这包括使用标准且开放的格式，以及开源或文档完善的软件，以确保在不同平台、设备和操作系统之间的互操作性与可移植性。",
     "<strong>积极参与</strong>：开放知识资源的用户不仅应是消费者，也应成为信息的生产者和工具的开发者。这意味着鼓励创建、改编和改进各类材料，以及应用、脚本或模板。使用 AGPL v3 或 MPL 2.0 等软件许可证，可确保改进成果回馈教育社区。",
