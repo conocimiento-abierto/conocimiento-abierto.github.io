@@ -19,7 +19,5 @@ window.DECALOGO_TEXTOS["de"] = {
     "<strong>Offene Lizenzen</strong>: Offene Wissensressourcen sollten unter Lizenzen geteilt werden, die freie Nutzung, Anpassung und Verbreitung erlauben. Für Bildungsinhalte werden Lizenzen wie CC BY-SA empfohlen. Für Bildungssoftware wird AGPL v3 empfohlen, mit Alternativen wie MPL 2.0, Apache 2.0 oder MIT je nach Kontext.",
     "<strong>Achtung der Urheberrechte</strong>: Auch wenn offenes Wissen größtmögliche Freiheit bei Nutzung, Anpassung und Verbreitung anstrebt, müssen Urheberrechte respektiert werden. Die Beiträge jedes Autors sind angemessen anzuerkennen und zu zitieren. Bei Software bedeutet dies, eine Datei LICENSE und Lizenzhinweise in den Code-Dateien hinzuzufügen sowie die Urheberschaft der Entwickler anzuerkennen."
   ],
-  "footer": "(ɔ) Dieses Dokument entstand auf <a href=\"https://t.me/ChatGPTedu\" target=\"_blank\">https://t.me/ChatGPTedu</a> · Version 2.1",
-  "code": "Code",
-  "content": "Inhalte"
+  "footer": "Dieses Dokument entstand auf <a href=\"https://t.me/ChatGPTedu\" target=\"_blank\">https://t.me/ChatGPTedu</a> · Version 2.1"
 };

@@ -19,7 +19,5 @@ window.DECALOGO_TEXTOS["en"] = {
     "<strong>Open licenses</strong>: Open knowledge resources should be shared under licenses that allow free use, adaptation, and distribution. For educational content, licenses such as CC BY-SA are recommended. For educational software, AGPL v3 is recommended, with alternatives such as MPL 2.0, Apache 2.0, or MIT depending on the context.",
     "<strong>Respect for copyright</strong>: While open knowledge seeks maximum freedom of use, adaptation, and distribution, it must also respect copyright. Each author’s contributions should be properly acknowledged and cited. For software, this means adding a LICENSE file and license notices in code files, and recognizing the authorship of developers."
   ],
-  "footer": "(ɔ) This document originated from <a href=\"https://t.me/ChatGPTedu\" target=\"_blank\">https://t.me/ChatGPTedu</a> · version 2.1",
-  "code": "Code",
-  "content": "Content"
+  "footer": "This document originated from <a href=\"https://t.me/ChatGPTedu\" target=\"_blank\">https://t.me/ChatGPTedu</a> · version 2.1"
 };

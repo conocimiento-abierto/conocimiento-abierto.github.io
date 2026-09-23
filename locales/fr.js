@@ -19,7 +19,5 @@ window.DECALOGO_TEXTOS["fr"] = {
     "<strong>Licences ouvertes</strong>: Les ressources de savoir ouvert doivent être partagées sous des licences permettant l’usage, l’adaptation et la distribution libres. Pour les contenus éducatifs, des licences comme CC BY-SA sont recommandées. Pour les logiciels éducatifs, l’AGPL v3 est recommandée, avec des alternatives telles que la MPL 2.0, l’Apache 2.0 ou la MIT selon le contexte.",
     "<strong>Respect du droit d’auteur</strong>: Bien que le savoir ouvert vise une liberté maximale d’usage, d’adaptation et de distribution, il doit également respecter le droit d’auteur. Les contributions de chaque auteur doivent être dûment reconnues et citées. Pour les logiciels, cela implique d’ajouter un fichier LICENSE et des notices de licence dans les fichiers de code, ainsi que de reconnaître l’autorat des développeurs."
   ],
-  "footer": "(ɔ) Ce document est né sur <a href=\"https://t.me/ChatGPTedu\" target=\"_blank\">https://t.me/ChatGPTedu</a> · version 2.1",
-  "code": "Code",
-  "content": "Contenus"
+  "footer": "Ce document est né sur <a href=\"https://t.me/ChatGPTedu\" target=\"_blank\">https://t.me/ChatGPTedu</a> · version 2.1"
 };

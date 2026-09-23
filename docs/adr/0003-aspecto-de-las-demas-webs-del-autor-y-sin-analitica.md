@@ -21,9 +21,13 @@ salvo que la pida.
 - Tipografía Atkinson Hyperlegible alojada en el repositorio.
 - Cada principio en una tarjeta, con su cifra, su título y su texto; dos
   columnas desde 56rem.
-- Pie con el origen y la versión, la autoría y las licencias (código AGPL v3 y
-  textos CC BY-SA 4.0, con el enlace a la traducción de la licencia en el idioma
-  elegido). Impresión como documento limpio, sin barra.
+- Pie con el origen y la versión, y debajo «(ɔ) 2025», la autoría y la licencia
+  del texto, CC BY-SA 4.0, con el enlace a su traducción en el idioma elegido. El
+  (ɔ) anuncia el copyleft y la CC BY-SA le da efecto legal. La licencia del
+  código (AGPL v3) queda solo en el repositorio: el código se limita a mostrar el
+  texto en varios idiomas y no tiene protagonismo propio, así que no se aplica la
+  preferencia general de citar en el pie las dos licencias, pensada para
+  programas y actividades. Impresión como documento limpio, sin barra.
 - Sin analítica: la página no envía ningún dato.
 
 ## Alternativas descartadas
@@ -35,5 +39,5 @@ salvo que la pida.
 
 ## Consecuencias
 
-Los textos de los botones y del pie (`printButton`, `language`, `theme`,
-`code`, `content`) forman parte de cada archivo de idioma.
+Los rótulos de los botones (`printButton`, `language`, `theme`) forman parte de
+cada archivo de idioma.
