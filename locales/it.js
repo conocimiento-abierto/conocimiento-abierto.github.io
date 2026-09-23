@@ -1,4 +1,4 @@
-// Textos del decálogo en Italiano. SPDX-License-Identifier: CC-BY-SA-4.0
+// Textos del decálogo en Italiano. SPDX-License-Identifier: CC0-1.0
 window.DECALOGO_TEXTOS = window.DECALOGO_TEXTOS || {};
 window.DECALOGO_TEXTOS["it"] = {
   "pageTitle": "Decalogo della conoscenza aperta",

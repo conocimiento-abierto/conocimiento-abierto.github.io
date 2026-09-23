@@ -1,4 +1,4 @@
-// Textos del decálogo en Русский. SPDX-License-Identifier: CC-BY-SA-4.0
+// Textos del decálogo en Русский. SPDX-License-Identifier: CC0-1.0
 window.DECALOGO_TEXTOS = window.DECALOGO_TEXTOS || {};
 window.DECALOGO_TEXTOS["ru"] = {
   "pageTitle": "Декалог открытых знаний",

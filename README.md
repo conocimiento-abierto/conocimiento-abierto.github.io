@@ -14,7 +14,7 @@ dispositivo, se puede imprimir y no recoge ningún dato.
 
 ## Licencias
 
-- Textos: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es) (`LICENSE-CONTENIDOS`).
+- Textos: dominio público, [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.es) (`LICENSE-CONTENIDOS`). Se pueden usar, copiar, modificar y difundir sin ninguna condición, ni siquiera citar la autoría.
 - Código: [AGPL v3](https://www.gnu.org/licenses/agpl-3.0.html) (`LICENSE`).
 - Tipografía Atkinson Hyperlegible: SIL Open Font License (`recursos/fuentes/OFL.txt`).
 - Iconos de [Lucide](https://lucide.dev/): ISC (`recursos/LUCIDE-LICENSE`).

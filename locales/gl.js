@@ -1,4 +1,4 @@
-// Textos del decálogo en Galego. SPDX-License-Identifier: CC-BY-SA-4.0
+// Textos del decálogo en Galego. SPDX-License-Identifier: CC0-1.0
 window.DECALOGO_TEXTOS = window.DECALOGO_TEXTOS || {};
 window.DECALOGO_TEXTOS["gl"] = {
   "pageTitle": "Decálogo do coñecemento aberto",

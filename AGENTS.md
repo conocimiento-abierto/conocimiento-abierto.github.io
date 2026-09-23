@@ -18,7 +18,7 @@ cargados con `<script>` y no con `fetch`.
 - `locales/<código>.js`: textos de cada idioma. Cada principio de `items` va
   como `<strong>Título</strong>: texto`, que el script separa en título y párrafo.
 - `recursos/`: logo, tipografía Atkinson Hyperlegible (OFL) y licencia de Lucide.
-- `LICENSE` (AGPL v3, código) y `LICENSE-CONTENIDOS` (CC BY-SA 4.0, textos).
+- `LICENSE` (AGPL v3, código) y `LICENSE-CONTENIDOS` (CC0 1.0, dominio público, textos).
 - `docs/adr/`: registro de decisiones, en castellano.
 
 ## Al cambiar algo

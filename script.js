@@ -6,7 +6,7 @@
 
   var CLAVE_TEMA = "conocimiento-abierto:tema";      // la misma que el arranque en <head>
   var CLAVE_IDIOMA = "preferredLanguage";            // nombre heredado: conserva la elección de quien ya visitó la página
-  var CC_DEED = { "zh-cn": "zh-hans" };              // idiomas cuya traducción de la licencia CC lleva otro código
+  var CC_DEED = { "zh-cn": "zh-hans" };              // idiomas cuya traducción de CC0 lleva otro código
 
   var traducciones = {};
   var idiomas = [];
@@ -85,7 +85,7 @@
       lista.appendChild(li);
     });
     $("idioma-actual").textContent = codigo.split("-")[0].toUpperCase();
-    $("enlace-cc").href = "https://creativecommons.org/licenses/by-sa/4.0/deed." + (CC_DEED[codigo] || codigo);
+    $("enlace-cc").href = "https://creativecommons.org/publicdomain/zero/1.0/deed." + (CC_DEED[codigo] || codigo);
     menu.querySelectorAll("[role=menuitemradio]").forEach(function (b) {
       b.setAttribute("aria-checked", b.dataset.idioma === codigo ? "true" : "false");
     });
