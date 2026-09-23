@@ -18,6 +18,7 @@ dispositivo, se puede imprimir y no recoge ningún dato.
 - Código: [AGPL v3](https://www.gnu.org/licenses/agpl-3.0.html) (`LICENSE`).
 - Tipografía Atkinson Hyperlegible: SIL Open Font License (`recursos/fuentes/OFL.txt`).
 - Iconos de [Lucide](https://lucide.dev/): ISC (`recursos/LUCIDE-LICENSE`).
+- Logo: diseñado con inteligencia artificial.
 
 ## Para trabajar en ella
 
