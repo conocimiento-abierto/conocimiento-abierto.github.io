@@ -1,6 +1,10 @@
-{
-  "pageTitle": "Ezagutza Irekiaren Dekalogoa",
-  "printButton": "🖨️ Inprimatu",
+// Textos del decálogo en Euskera. SPDX-License-Identifier: CC-BY-SA-4.0
+window.DECALOGO_TEXTOS = window.DECALOGO_TEXTOS || {};
+window.DECALOGO_TEXTOS["eu"] = {
+  "pageTitle": "Ezagutza irekiaren dekalogoa",
+  "printButton": "Inprimatu",
+  "language": "Hizkuntza",
+  "theme": "Modu argia edo iluna",
   "logoAlt": "Ezagutza Irekiaren Logoa",
   "mainTitle": "Ezagutza irekiaren dekalogoa",
   "items": [
@@ -15,5 +19,7 @@
     "<strong>Lizentzia irekiak</strong>: Ezagutza irekiko baliabideak erabilera, egokitzapen eta banaketa librea baimentzen duten lizentzien pean partekatu behar dira. Eduki didaktikoetan, CC BY-SA bezalako lizentziak gomendatzen dira. Hezkuntza-softwarean, AGPL v3 gomendatzen da, eta, testuinguruaren arabera, MPL 2.0, Apache 2.0 edo MIT bezalako alternatibak.",
     "<strong>Egile-eskubideen errespetua</strong>: Ezagutza irekiak erabilera, egokitzapen eta banaketaren askatasun handiena bilatzen duen arren, egile-eskubideak ere errespetatu behar dira. Egile bakoitzaren ekarpenak behar bezala aitortu eta aipa behar dira. Softwarean, horrek LICENSE fitxategia eta lizentzia-oharrak kode-fitxategietan gehitzea eta garatzaileen egiletza aitortzea esan nahi du."
   ],
-  "footer": "(ɔ) Dokumentu hau sortu zen <a href=\"https://t.me/ChatGPTedu\" target=\"_blank\">https://t.me/ChatGPTedu</a> · bertsioa 2.1"
-}
+  "footer": "(ɔ) Dokumentu hau sortu zen <a href=\"https://t.me/ChatGPTedu\" target=\"_blank\">https://t.me/ChatGPTedu</a> · bertsioa 2.1",
+  "code": "Kodea",
+  "content": "Edukiak"
+};

@@ -1,6 +1,10 @@
-{
-  "pageTitle": "Decálogo del Conocimiento Abierto",
-  "printButton": "🖨️ Imprimir",
+// Textos del decálogo en Español. SPDX-License-Identifier: CC-BY-SA-4.0
+window.DECALOGO_TEXTOS = window.DECALOGO_TEXTOS || {};
+window.DECALOGO_TEXTOS["es"] = {
+  "pageTitle": "Decálogo del conocimiento abierto",
+  "printButton": "Imprimir",
+  "language": "Idioma",
+  "theme": "Modo claro u oscuro",
   "logoAlt": "Logo de Conocimiento Abierto",
   "mainTitle": "Decálogo del conocimiento abierto",
   "items": [
@@ -15,5 +19,7 @@
     "<strong>Licencias abiertas</strong>: Los recursos de conocimiento abierto deben ser compartidos bajo licencias que permitan su libre uso, adaptación y distribución. En contenidos educativos, se recomiendan licencias como CC BY-SA. En software educativo, se recomienda AGPL v3, con alternativas como MPL 2.0, Apache 2.0 o MIT, según el contexto de uso.",
     "<strong>Respeto a los derechos de autor</strong>: Aunque el conocimiento abierto busca la máxima libertad de uso, adaptación y distribución, también debe respetar los derechos de autor. Las contribuciones de cada autor deben ser debidamente reconocidas y citadas. En software, esto implica añadir un archivo LICENSE y notas de licencia en los archivos de código, además de reconocer la autoría de los desarrolladores."
   ],
-  "footer": "(ɔ) Este documento tuvo su origen en <a href=\"https://t.me/ChatGPTedu\" target=\"_blank\">https://t.me/ChatGPTedu</a> · versión 2.1"
-}
+  "footer": "(ɔ) Este documento tuvo su origen en <a href=\"https://t.me/ChatGPTedu\" target=\"_blank\">https://t.me/ChatGPTedu</a> · versión 2.1",
+  "code": "Código",
+  "content": "Contenidos"
+};

@@ -1,6 +1,10 @@
-{
+// Textos del decálogo en 简体中文. SPDX-License-Identifier: CC-BY-SA-4.0
+window.DECALOGO_TEXTOS = window.DECALOGO_TEXTOS || {};
+window.DECALOGO_TEXTOS["zh-cn"] = {
   "pageTitle": "开放知识十诫",
-  "printButton": "🖨️ 打印",
+  "printButton": "打印",
+  "language": "语言",
+  "theme": "浅色或深色模式",
   "logoAlt": "开放知识标志",
   "mainTitle": "开放知识十诫",
   "items": [
@@ -15,5 +19,7 @@
     "<strong>开放许可</strong>：开放知识资源应在允许自由使用、改编与传播的许可下共享。对于教育内容，推荐使用 CC BY-SA 等许可。对于教育软件，推荐 AGPL v3；也可视情选择 MPL 2.0、Apache 2.0 或 MIT 等替代方案。",
     "<strong>尊重版权</strong>：尽管开放知识追求最大限度的使用、改编与传播自由，也必须尊重版权。每位作者的贡献都应得到恰当的署名与引用。对于软件，这意味着添加 LICENSE 文件并在代码文件中注明许可，同时认可开发者的署名权。"
   ],
-  "footer": "(ɔ) 本文档起源于 <a href=\"https://t.me/ChatGPTedu\" target=\"_blank\">https://t.me/ChatGPTedu</a> · 版本 2.1"
-}
+  "footer": "(ɔ) 本文档起源于 <a href=\"https://t.me/ChatGPTedu\" target=\"_blank\">https://t.me/ChatGPTedu</a> · 版本 2.1",
+  "code": "代码",
+  "content": "内容"
+};

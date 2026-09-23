@@ -1,6 +1,10 @@
-{
-  "pageTitle": "Decàleg del Coneixement Obert",
-  "printButton": "🖨️ Imprimir",
+// Textos del decálogo en Català. SPDX-License-Identifier: CC-BY-SA-4.0
+window.DECALOGO_TEXTOS = window.DECALOGO_TEXTOS || {};
+window.DECALOGO_TEXTOS["ca"] = {
+  "pageTitle": "Decàleg del coneixement obert",
+  "printButton": "Imprimeix",
+  "language": "Idioma",
+  "theme": "Mode clar o fosc",
   "logoAlt": "Logo de Coneixement Obert",
   "mainTitle": "Decàleg del coneixement obert",
   "items": [
@@ -15,5 +19,7 @@
     "<strong>Llicències obertes</strong>: Els recursos de coneixement obert s’han de compartir amb llicències que en permetin l’ús, l’adaptació i la distribució lliures. En continguts educatius, es recomanen llicències com CC BY-SA. En programari educatiu, es recomana AGPL v3, amb alternatives com MPL 2.0, Apache 2.0 o MIT segons el context.",
     "<strong>Respecte als drets d'autor</strong>: Tot i que el coneixement obert busca la màxima llibertat d’ús, adaptació i distribució, també ha de respectar els drets d’autor. Les contribucions de cada autor s’han de reconèixer i citar degudament. En programari, això implica afegir un fitxer LICENSE i avisos de llicència als fitxers de codi, a més de reconèixer l’autoria dels desenvolupadors."
   ],
-  "footer": "(ɔ) Aquest document va tenir el seu origen a <a href=\"https://t.me/ChatGPTedu\" target=\"_blank\">https://t.me/ChatGPTedu</a> · versió 2.1"
-}
+  "footer": "(ɔ) Aquest document va tenir el seu origen a <a href=\"https://t.me/ChatGPTedu\" target=\"_blank\">https://t.me/ChatGPTedu</a> · versió 2.1",
+  "code": "Codi",
+  "content": "Continguts"
+};

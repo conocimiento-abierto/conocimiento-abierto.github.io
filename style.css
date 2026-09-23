@@ -1,229 +1,104 @@
-/* Estilos generales */
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f4f4f9;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        
-        .content-wrapper {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-        
-        header {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 2px solid #e0e6ed;
-        }
+/* SPDX-License-Identifier: AGPL-3.0-or-later
+   Decálogo del conocimiento abierto. Sin bibliotecas: la tipografía está en
+   recursos/fuentes y el tema claro u oscuro sigue al del dispositivo, salvo que
+   se elija otro con el botón de la barra (data-theme en <html>).
+   Colores: el azul marino del logo y un naranja de acento para las cifras. */
+@font-face { font-family: "Atkinson Hyperlegible"; src: url("recursos/fuentes/atkinson-hyperlegible-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Atkinson Hyperlegible"; src: url("recursos/fuentes/atkinson-hyperlegible-700-normal.woff2") format("woff2"); font-weight: 700; font-display: swap; }
 
-        .header-logo {
-            max-width: 100px; /* Reducido para un mejor balance */
-            height: auto;
-            margin-right: 1.5rem;
-        }
-        
-        h1 {
-            margin: 0;
-            color: #0056b3;
-            font-size: 2.2rem;
-        }
-        
-        .controls {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
+:root {
+  --fondo: #f5f6f8; --hoja: #ffffff; --tinta: #172033; --tinta-suave: #4b5567; --raya: #dfe3ea;
+  --marino: #0f2d52; --acento: #b4460f; --marca: #e8eef6;
+  --sombra: 0 1px 2px rgba(15, 45, 82, 0.06), 0 6px 20px rgba(15, 45, 82, 0.06);
+  color-scheme: light;
+}
+@media screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fondo: #0d1420; --hoja: #151f2e; --tinta: #e7ebf1; --tinta-suave: #a8b3c4; --raya: #26334a;
+    --marino: #9cc0f0; --acento: #f29a5e; --marca: #1c2a40;
+    --sombra: 0 1px 2px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.25);
+    color-scheme: dark;
+  }
+}
+@media screen {
+  :root[data-theme="dark"] {
+    --fondo: #0d1420; --hoja: #151f2e; --tinta: #e7ebf1; --tinta-suave: #a8b3c4; --raya: #26334a;
+    --marino: #9cc0f0; --acento: #f29a5e; --marca: #1c2a40;
+    --sombra: 0 1px 2px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.25);
+    color-scheme: dark;
+  }
+}
 
-        #lang-selector {
-            padding: 8px 12px;
-            margin-left: 8px;
-            background-color: #e9ecef;
-            border: 1px solid #ced4da;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            -webkit-appearance: none; /* Remove default arrow */
-            -moz-appearance: none;
-            appearance: none;
-            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
-            background-repeat: no-repeat;
-            background-position: right 12px center;
-            background-size: 12px;
-            padding-right: 35px; /* Make space for arrow */
-        }
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; min-height: 100vh; display: flex; flex-direction: column;
+  background: var(--fondo); color: var(--tinta);
+  font-family: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans SC", Arial, sans-serif;
+  font-size: 1.0625rem; line-height: 1.6; overflow-wrap: break-word;
+}
+a { color: var(--marino); text-underline-offset: 0.15em; }
+:focus-visible { outline: 3px solid var(--acento); outline-offset: 2px; border-radius: 4px; }
 
-        #lang-selector:hover {
-            background-color: #d1d9e0;
-        }
+/* ---------- Barra ---------- */
+.barra { background: var(--hoja); border-bottom: 1px solid var(--raya); }
+.barra-in { max-width: 72rem; margin: 0 auto; padding: 0.6rem 1rem; display: flex; align-items: center; gap: 0.75rem; }
+.marca-logo { width: 44px; height: 44px; border-radius: 10px; background: #fff; border: 1px solid var(--raya); }
+.botones { margin-left: auto; display: flex; gap: 0.4rem; }
+.boton {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.3rem;
+  min-width: 2.6rem; height: 2.6rem; padding: 0 0.55rem;
+  background: transparent; color: var(--tinta); border: 1px solid var(--raya); border-radius: 10px;
+  font: inherit; font-size: 0.85rem; font-weight: 700; cursor: pointer;
+}
+.boton:hover { background: var(--marca); }
+.icono { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.con-menu { position: relative; }
+.menu {
+  position: absolute; right: 0; top: calc(100% + 0.35rem); z-index: 10; margin: 0; padding: 0.35rem; list-style: none;
+  min-width: 11rem; max-height: 70vh; overflow-y: auto;
+  background: var(--hoja); border: 1px solid var(--raya); border-radius: 10px; box-shadow: var(--sombra);
+}
+.menu[hidden] { display: none; }
+.menu button {
+  display: block; width: 100%; text-align: left; padding: 0.45rem 0.7rem 0.45rem 1.8rem; position: relative;
+  background: none; border: 0; border-radius: 6px; color: var(--tinta); font: inherit; font-size: 0.95rem; cursor: pointer;
+}
+.menu button:hover, .menu button:focus-visible { background: var(--marca); outline-offset: -2px; }
+.menu button[aria-checked="true"] { font-weight: 700; }
+.menu button[aria-checked="true"]::before { content: "✓"; position: absolute; left: 0.6rem; color: var(--acento); }
 
-        #lang-selector:focus {
-            outline: none;
-            border-color: #007bff;
-            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
-        }
-        
-        ol {
-            padding-left: 1.8rem;
-            list-style-type: none;
-            counter-reset: item;
-        }
-        
-        li {
-            margin-bottom: 1.5rem;
-            counter-increment: item;
-            position: relative;
-            padding-left: 35px;
-        }
+/* ---------- Decálogo ---------- */
+main { flex: 1; width: 100%; max-width: 72rem; margin: 0 auto; padding: 2rem 1rem 2.5rem; }
+.titulo { margin: 0 0 1.6rem; color: var(--marino); font-size: clamp(1.8rem, 1.2rem + 2.4vw, 2.7rem); line-height: 1.15; }
+.decalogo { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.principio {
+  display: grid; grid-template-columns: auto 1fr; grid-template-areas: "cifra titulo" "texto texto";
+  column-gap: 0.7rem; align-items: baseline; align-content: start;
+  background: var(--hoja); border: 1px solid var(--raya); border-radius: 14px; padding: 1.1rem 1.2rem 1.2rem; box-shadow: var(--sombra);
+}
+.cifra { grid-area: cifra; color: var(--acento); font-size: 1.9rem; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.principio h2 { grid-area: titulo; margin: 0 0 0.4rem; font-size: 1.15rem; line-height: 1.3; color: var(--marino); }
+.principio p { grid-area: texto; margin: 0; color: var(--tinta); }
+@media (min-width: 56rem) {
+  .decalogo { grid-template-columns: 1fr 1fr; }
+  .principio { grid-template-columns: 2.4rem 1fr; grid-template-areas: "cifra titulo" "cifra texto"; }
+}
 
-        li::before {
-            content: counter(item);
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            font-weight: bold;
-            line-height: 25px;
-        }
-        
-        strong {
-            font-weight: bold;
-            color: #343a40;
-        }
+/* ---------- Pie ---------- */
+.pie { border-top: 1px solid var(--raya); color: var(--tinta-suave); font-size: 0.85rem; text-align: center; padding: 1rem; }
+.pie p { margin: 0.2rem 0; }
+.pie a { color: var(--tinta-suave); }
 
-        footer {
-            text-align: center;
-            margin-top: 3rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #e0e6ed;
-            font-size: 0.9rem;
-            color: #6c757d;
-        }
-        
-        .hidden {
-            display: none;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-            .content-wrapper {
-                padding: 20px;
-            }
-            h1 {
-                font-size: 1.8rem;
-            }
-        }
-        
-        @media (max-width: 576px) {
-             header {
-                flex-direction: column;
-                text-align: center;
-            }
-            .header-logo {
-                margin-right: 0;
-                margin-bottom: 1rem;
-            }
-            .lang-selector {
-                flex-direction: column;
-            }
-            .print-btn {
-                margin-right: 0;
-                margin-bottom: 10px;
-                width: 100%;
-            }
-            .lang-btn {
-                width: 100%;
-                margin-left: 0;
-                margin-top: 5px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .content-wrapper {
-                padding: 15px;
-            }
-            h1 {
-                font-size: 1.5rem;
-            }
-            li {
-                padding-left: 30px;
-            }
-        }
-
-        /* Print styles */
-        @media print {
-            body {
-                background-color: #fff;
-                color: #000;
-                font-family: 'Times New Roman', Times, serif;
-                font-size: 11pt; /* Ajuste de fuente base para impresión */
-                line-height: 1.3;
-            }
-            .controls, footer {
-                display: none;
-            }
-            .container {
-                max-width: 100%;
-                margin: 0;
-                padding: 0;
-            }
-            .content-wrapper {
-                box-shadow: none;
-                border: none;
-                padding: 0;
-            }
-            header {
-                border-bottom: 2px solid #000;
-                padding-bottom: 1rem;
-                margin-bottom: 1.5rem;
-            }
-            .header-logo {
-                max-width: 75px;
-                margin-right: 1rem;
-            }
-            h1 {
-                font-size: 16pt;
-                margin: 0;
-            }
-            ol {
-                padding-left: 25px;
-            }
-            li {
-                page-break-inside: avoid;
-                margin-bottom: 0.8rem; /* Reducir espacio entre elementos */
-                padding-left: 30px;
-            }
-            li::before {
-                width: 22px;
-                height: 22px;
-                line-height: 22px;
-                font-size: 10pt;
-            }
-            a {
-                text-decoration: none;
-                color: #000;
-            }
-        }
+/* ---------- Impresión: un documento limpio, siempre en claro ---------- */
+@media print {
+  .barra { display: none; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  main { padding: 0; max-width: none; }
+  .titulo { color: #0f2d52; margin-bottom: 1rem; }
+  .decalogo { display: block; }
+  .principio { box-shadow: none; border: 0; border-bottom: 1px solid #ccc; border-radius: 0; padding: 0.6rem 0; break-inside: avoid; background: none; }
+  .cifra { color: #b4460f; }
+  .principio h2 { color: #0f2d52; }
+  .pie, .pie a { color: #333; border: 0; }
+}

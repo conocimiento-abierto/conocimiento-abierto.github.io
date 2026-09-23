@@ -1,102 +1,30 @@
-# Decalogue of Open Knowledge
+# Decálogo del conocimiento abierto
 
-A static, multilingual website displaying the ten principles of open knowledge with dynamic language switching and print functionality.
+Diez principios para crear y compartir conocimiento abierto en educación:
+acceso universal, participación activa, diversidad, colaboración,
+sostenibilidad, innovación, calidad, formación, licencias abiertas y respeto a
+la autoría.
 
-## Features
+👉 https://conocimiento-abierto.github.io/
 
-- **Multilingual Support**: Dynamic language system supporting multiple languages
-- **Print Optimization**: Dedicated print styles for clean document output
-- **Responsive Design**: Mobile-first design that works across all devices
-- **Browser Language Detection**: Automatically detects and sets user's preferred language
-- **Local Storage**: Remembers language preference across sessions
-- **URL Language Parameter**: Force a language with `?lang=xx` (also accepts `?idioma=xx`)
+Está en castellano, catalán, gallego, euskera, francés, italiano, portugués,
+alemán, ruso, chino e inglés. El idioma se elige con el botón de la barra o con
+la dirección, por ejemplo `?lang=ca`. La página sigue el tema claro u oscuro del
+dispositivo, se puede imprimir y no recoge ningún dato.
 
-## Languages
+## Licencias
 
-Languages are dynamically loaded from configuration. Check `locales/config.json` for current supported languages.
+- Textos: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es) (`LICENSE-CONTENIDOS`).
+- Código: [AGPL v3](https://www.gnu.org/licenses/agpl-3.0.html) (`LICENSE`).
+- Tipografía Atkinson Hyperlegible: SIL Open Font License (`recursos/fuentes/OFL.txt`).
+- Iconos de [Lucide](https://lucide.dev/): ISC (`recursos/LUCIDE-LICENSE`).
 
-## Getting Started
+## Para trabajar en ella
 
-### Local Development
+Es una página estática sin dependencias, que funciona también abierta como
+archivo local, con doble clic en `index.html`.
 
-This is a static website with no build process required:
+La organización del código y las normas para cambiarlo están en
+[AGENTS.md](AGENTS.md), y el porqué de las decisiones, en [docs/adr](docs/adr/).
 
-```bash
-# Option 1: Open directly in browser
-open index.html
-
-# Option 2: Serve with Python
-python3 -m http.server 8000
-
-# Option 3: Serve with Node.js
-npx serve .
-```
-
-### Project Structure
-
-```
-├── index.html          # Main page structure
-├── script.js           # JavaScript for i18n and functionality
-├── style.css           # Responsive and print styles
-├── locales/
-│   ├── config.json     # Language configuration
-│   └── *.json          # Translation files
-├── abierto.png         # Logo image
-└── abierto_reducido.png # Reduced logo for mobile
-```
-
-## URL Language Parameter
-
-You can force the language from the URL using a query parameter. This takes priority over localStorage and browser detection.
-
-Examples:
-
-```
-index.html?lang=es
-index.html?lang=en
-index.html?idioma=fr
-```
-
-## Adding New Languages
-
-1. Create a new translation file in `locales/{language-code}.json`
-2. Add the language entry to `locales/config.json`
-3. The system will automatically discover and load the new language
-
-### Translation File Format
-
-```json
-{
-  "title": "Translated title",
-  "subtitle": "Translated subtitle",
-  "print": "Print button text",
-  "items": [
-    "First principle...",
-    "Second principle...",
-    ...
-  ]
-}
-```
-
-## Deployment
-
-Deploy to any static hosting service:
-
-- **GitHub Pages**: Push to `gh-pages` branch
-- **Netlify**: Connect repository and deploy
-- **Vercel**: Import project and deploy
-- **Traditional hosting**: Upload files to web server
-
-## Technical Details
-
-- **No build process**: Pure HTML, CSS, and JavaScript
-- **Async translation loading**: Uses `fetch()` and `Promise.all()` for optimal performance
-- **Progressive enhancement**: Graceful fallbacks for missing translations
-- **Print-first design**: Optimized for both screen and print media
-
-## Browser Support
-
-Works in all modern browsers that support:
-- ES6+ JavaScript features
-- CSS Grid and Flexbox
-- Fetch API
+© 2025 [Juan José de Haro](https://bilateria.org)

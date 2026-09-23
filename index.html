@@ -1,35 +1,73 @@
 <!DOCTYPE html>
+<!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="analytics-endpoint" content="https://bilateria.org/app/estadistica/conocimiento-abierto/track.php">
-    <meta name="analytics-site-id" content="conocimiento-abierto">
-    <title data-i18n-key="pageTitle">Decálogo del Conocimiento Abierto</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n-key="pageTitle">Decálogo del conocimiento abierto</title>
+<meta name="description" content="Diez principios para crear y compartir conocimiento abierto en educación.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Decálogo del conocimiento abierto">
+<meta property="og:image" content="https://conocimiento-abierto.github.io/abierto.png">
+<link rel="icon" href="favicon.ico">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+<link rel="stylesheet" href="style.css">
+<!-- Tema antes de pintar, para que no parpadee: el guardado si se eligió uno, si no el del dispositivo -->
+<script>(function(){try{var t=localStorage.getItem("conocimiento-abierto:tema");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<!-- Los textos van en archivos .js y no .json para que la página funcione también abierta como archivo local -->
+<script src="locales/idiomas.js" defer></script>
+<script src="locales/es.js" defer></script>
+<script src="locales/ca.js" defer></script>
+<script src="locales/gl.js" defer></script>
+<script src="locales/eu.js" defer></script>
+<script src="locales/fr.js" defer></script>
+<script src="locales/it.js" defer></script>
+<script src="locales/pt.js" defer></script>
+<script src="locales/de.js" defer></script>
+<script src="locales/ru.js" defer></script>
+<script src="locales/zh-cn.js" defer></script>
+<script src="locales/en.js" defer></script>
+<script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <div class="controls">
-            <button id="btnPrint" data-i18n-key="printButton">🖨️ Imprimir</button>
-            <select id="lang-selector" aria-label="Seleccionar idioma"></select>
-        </div>
-        
-        <div class="content-wrapper">
-            <header>
-                <img src="https://conocimiento-abierto.github.io/abierto_reducido.png" data-i18n-key="logoAlt" alt="Logo de Conocimiento Abierto" class="header-logo" title="Facta, non verba">
-                <h1 data-i18n-key="mainTitle"></h1>
-            </header>
-            
-            <div id="content">
-                <ol id="decalogue-list"></ol>
-                <footer>
-                    <p data-i18n-key="footer"></p>
-                </footer>
-            </div>
-        </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <!-- Iconos de Lucide (ISC) -->
+  <symbol id="i-lang" viewBox="0 0 24 24"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></symbol>
+</svg>
+
+<header class="barra">
+  <div class="barra-in">
+    <img src="recursos/logo.png" width="44" height="44" alt="" class="marca-logo" title="Facta, non verba">
+    <div class="botones">
+      <div class="con-menu">
+        <button type="button" class="boton" id="btn-idioma" aria-haspopup="true" aria-expanded="false" aria-controls="menu-idioma" data-i18n-label="language" title="Idioma" aria-label="Idioma">
+          <svg class="icono" aria-hidden="true"><use href="#i-lang"/></svg><span class="idioma-actual" id="idioma-actual">ES</span>
+        </button>
+        <ul class="menu" id="menu-idioma" role="menu" hidden></ul>
+      </div>
+      <button type="button" class="boton" id="btn-tema" data-i18n-label="theme" title="Modo claro u oscuro" aria-label="Modo claro u oscuro">
+        <svg class="icono" aria-hidden="true"><use href="#i-moon"/></svg>
+      </button>
+      <button type="button" class="boton" id="btn-imprimir" data-i18n-label="printButton" title="Imprimir" aria-label="Imprimir">
+        <svg class="icono" aria-hidden="true"><use href="#i-print"/></svg>
+      </button>
     </div>
-    
-    <script src="script.js"></script>
+  </div>
+</header>
+
+<main id="contenido">
+  <h1 class="titulo" data-i18n-key="mainTitle">Decálogo del conocimiento abierto</h1>
+  <ol class="decalogo" id="decalogo"></ol>
+</main>
+
+<footer class="pie">
+  <p data-i18n-key="footer"></p>
+  <p>© 2025 <a href="https://bilateria.org" target="_blank" rel="noopener">Juan José de Haro</a>.
+    <span data-i18n-key="code">Código</span>: <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">AGPL v3</a> ·
+    <span data-i18n-key="content">Contenidos</span>: <a id="enlace-cc" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
+</footer>
 </body>
 </html>
