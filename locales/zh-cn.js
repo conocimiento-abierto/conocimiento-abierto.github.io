@@ -16,8 +16,8 @@ window.DECALOGO_TEXTOS["zh-cn"] = {
     "<strong>创新</strong>：开放知识为教育中的试验与创新提供可能。我们应当拥抱并推动利用这种灵活性的全新教与学方式。",
     "<strong>质量与严谨性</strong>：应通过同行评审及其他质量控制机制保障开放知识的质量。这既包括教育内容，也包括软件，两者都应由社区进行审阅与测试，以确保可靠性与教学有效性。",
     "<strong>教育与技能</strong>：应当对用户进行开放知识资源使用方面的教育。这包括培养数字技能、理解许可证与权利，以及学习资源的创建与改编。",
-    "<strong>开放许可</strong>：开放知识资源应在允许自由使用、改编与传播的许可下共享。对于教育内容，推荐使用 CC BY-SA 等许可。对于教育软件，推荐 AGPL v3；也可视情选择 MPL 2.0、Apache 2.0 或 MIT 等替代方案。",
+    "<strong>开放许可</strong>：开放知识资源应在允许以任何目的使用、改编与传播的许可下共享，正如<a href=\"https://opendefinition.org/od/2.1/zh/\" target=\"_blank\">《开放定义》</a>所规定的。因此，禁止商业使用或禁止演绎作品的许可不被视为开放许可。对于教育内容，推荐使用 CC BY-SA 等许可。对于教育软件，推荐 AGPL v3；也可视情选择 MPL 2.0、Apache 2.0 或 MIT 等替代方案。",
     "<strong>尊重版权</strong>：尽管开放知识追求最大限度的使用、改编与传播自由，也必须尊重版权。每位作者的贡献都应得到恰当的署名与引用。对于软件，这意味着添加 LICENSE 文件并在代码文件中注明许可，同时认可开发者的署名权。"
   ],
-  "footer": "本文档起源于 <a href=\"https://t.me/ChatGPTedu\" target=\"_blank\">https://t.me/ChatGPTedu</a> · 版本 2.2"
+  "footer": "本文档起源于 <a href=\"https://t.me/ChatGPTedu\" target=\"_blank\">https://t.me/ChatGPTedu</a> · 版本 2.3"
 };
