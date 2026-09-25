@@ -20,6 +20,10 @@ Conocimiento Abierto](https://opendefinition.org/od/2.1/es/) (Open Definition
 2.1) y dice que no se consideran abiertas las licencias que prohíben el uso
 comercial o las obras derivadas. Las licencias recomendadas no cambian.
 
+En la misma versión, el punto 1 pide «software de código abierto» en lugar de
+«código abierto o documentado», porque un programa solo documentado, sin su
+código fuente disponible, no cumple la definición que cita el punto 9.
+
 Cada idioma enlaza la traducción de la definición en ese idioma: castellano,
 gallego, alemán, portugués (la de Brasil) y chino. Catalán, euskera, francés,
 italiano y ruso enlazan la versión inglesa, porque no hay traducción, y añaden
